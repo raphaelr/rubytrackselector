@@ -1,4 +1,4 @@
-Tired of hearing the same background music in your game?
+Tired of hearing always the same background music in your game?
 Too lazy to fire up your media player?
 
 Ruby Track Selector to the rescue!
@@ -28,7 +28,7 @@ With application specific directories:
     require "rubytrackselector"
     
     rts = RTS::Rts.new
-    rts.tag = Rts::MENU
+    rts.tag = RTS::MENU
     rts.local << File.join(File.dirname(__FILE__), "music")
     rts.enable_local = true
     
