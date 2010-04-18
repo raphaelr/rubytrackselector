@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: RTS</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/rubytrackselector/home_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rubytrackselector/home.rb">lib/rubytrackselector/home.rb</a></li>
+					
+						<li><a href="./lib/rubytrackselector/utp_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rubytrackselector/utp.rb">lib/rubytrackselector/utp.rb</a></li>
+					
+						<li><a href="./lib/rubytrackselector_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rubytrackselector.rb">lib/rubytrackselector.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="RTS/Rts.html">RTS::Rts</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000000">::home</a></li>
+					
+					<li><a href="#M000001">::user_music</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./doc/index_rdoc.html">index.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./RTS.html">RTS</a></li>
+				
+					<li><a href="./RTS/Rts.html">RTS::Rts</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">RTS</h1>
+
+		<div id="description">
+			<h2>Usage Example</h2>
+<pre>
+    # Initialize
+    @rts = RTS::Rts.new
+    @rts.local &lt;&lt; &quot;data/music&quot; # Add application specific music directory.    (optional)
+    @rts.enable_local = true   # Enable application specific music directory.
+    
+    # And play
+    @rts.tag = RTS::MENU       # See below for a full list of tags.
+                               # You can set it to any string you like.
+    @rts.play(:repeats =&gt; -1)  # Select a random music and play it.
+                               # Returns the selected Rubygame::Music.
+ 
+     
+    # Or manually:
+    music = Rubygame::Music.load(@rts.files.sample)
+    music.play(:repeats =&gt; -1)
+</pre>
+<hr style="height: 1px"></hr>
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="MENU">MENU</a></dt>
+				
+				<dd class="description"><p>
+Tag for menu tracks.
+</p></dd>
+				
+			
+				<dt><a name="CALM_MENU">CALM_MENU</a></dt>
+				
+				<dd class="description"><p>
+Tag for calm menu tracks.
+</p></dd>
+				
+			
+				<dt><a name="LOADING">LOADING</a></dt>
+				
+				<dd class="description"><p>
+Tag for loading tracks.
+</p></dd>
+				
+			
+				<dt><a name="CALM_LOADING">CALM_LOADING</a></dt>
+				
+				<dd class="description"><p>
+Tag for calm loading tracks.
+</p></dd>
+				
+			
+				<dt><a name="ACTION_SCENE">ACTION_SCENE</a></dt>
+				
+				<dd class="description"><p>
+Tag for action tracks.
+</p></dd>
+				
+			
+				<dt><a name="PUZZLE_SCENE">PUZZLE_SCENE</a></dt>
+				
+				<dd class="description"><p>
+Tag for puzzle tracks.
+</p></dd>
+				
+			
+				<dt><a name="WORLD_SCENE">WORLD_SCENE</a></dt>
+				
+				<dd class="description"><p>
+Tag for world map tracks.
+</p></dd>
+				
+			
+				<dt><a name="VERSION">VERSION</a></dt>
+				
+				<dd class="description"><p>
+Ruby Track Selector Version.
+</p>
+<p>
+<tt>[major, minor, revision]</tt>
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="home-method" class="method-detail ">
+				<a name="M000000"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">home</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the user&#8217;s home directory.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="home-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rubytrackselector/home.rb, line 24</span>
+24:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">home</span>
+25:                 <span class="ruby-keyword kw">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-value str">&quot;~&quot;</span>)
+26:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="user-music-method" class="method-detail ">
+				<a name="M000001"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">user_music</span><span
+						class="method-args">(create = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the path to the user&#8217;s custom music directory.
+</p>
+<table>
+<tr><td valign="top"><tt>create</tt></td><td><p>
+If this parameter is true, the directory will be created if it
+doesn&#8217;t exists.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="user-music-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rubytrackselector/home.rb, line 32</span>
+32:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">user_music</span>(<span class="ruby-identifier">create</span> = <span class="ruby-keyword kw">true</span>)
+33:                 <span class="ruby-identifier">dn</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">home</span>, <span class="ruby-constant">RTS_DIR</span>)
+34:                 <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-identifier">dn</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">create</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">dn</span>)
+35:                 <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">dn</span>
+36:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

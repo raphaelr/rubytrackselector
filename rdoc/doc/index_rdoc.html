@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: index.rdoc [Ruby Track Selector 0.0.1]</title>
+
+	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../doc/index_rdoc.html">index.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../RTS.html">RTS</a></li>
+				
+					<li><a href="../RTS/Rts.html">RTS::Rts</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<p>
+For a complete example, see the <a href="../RTS.html">RTS</a> module
+documentation.
+</p>
+<h2>User Music Directory Structure</h2>
+<pre>
+    ~ (home)
+    |
+    +- .rubytracks (created automatically)
+    |  |
+    |  +- tag1 (created automatically if needed)
+    |  +- tag2 (created automatically if needed)
+    |  |
+    |  +- noname_tag_independent_music.ogg
+    |  +- noname_tag_independent_music2.ogg
+        
+</pre>
+<p>
+The standard tag names are:
+</p>
+<pre>
+    * menu
+    * calm_menu
+    * loading
+    * calm_loading
+    * action_scene
+    * puzzle_scene
+    * world_scene
+        
+</pre>
+<h2>Local Music Directory</h2>
+<p>
+Each application may define it&#8217;s own music directory, which has the
+same structure as the user&#8217;s music directory.
+</p>
+<pre>
+    @rts = RTS::Rts.new
+    @rts.local &lt;&lt; &quot;data/music&quot;
+    @rts.enable_local = true
+</pre>
+<h2>Setting the tag</h2>
+<pre>
+    @rts.tag = RTS::MENU
+</pre>
+<h2>Selecting a random file</h2>
+<pre>
+    @rts.files.sample
+</pre>
+<h2>Playing a random file</h2>
+<pre>
+    @rts.play
+        # Any options passed to RTS::Rts#play get redirected to Rubygame::Music#play.
+</pre>
+<h2>Noname-Tag</h2>
+<p>
+If you don&#8217;t set a tag, or set the tag to RTS::NONAME, User Track
+Player will select the files outside a tag (directly in
+~/.usertrackplayer). You shouldn&#8217;t do that.
+</p>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+
