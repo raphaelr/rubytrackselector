@@ -1,0 +1,54 @@
+Tired of hearing the same background music in your game?
+Too lazy to fire up your media player?
+
+Ruby Track Selector to the rescue!
+ => gem install rubytrackselector
+
+_______________________________________________________________________________
+
+Ruby Track Selector organizes your game music into tags (for example "menu" or
+"loading") and generates a list of all music files for a given tag in
+"~/.rubytracks" and one or more application specific directories. The
+application specific directories can be disabled and re-enabled at will.
+
+_______________________________________________________________________________
+
+Example:
+
+    require "rubytrackselector"
+    
+    rts = RTS::Rts.new
+    rts.tag = RTS::MENU
+    
+    rts.files.sample   # => ~/.rubytracks/menu/ultra_awesome_menu_song.ogg
+    rts.files.sample   # => ~/.rubytracks/menu/awesome_menu_song.ogg
+
+With application specific directories:
+
+    require "rubytrackselector"
+    
+    rts = RTS::Rts.new
+    rts.tag = Rts::MENU
+    rts.local << File.join(File.dirname(__FILE__), "music")
+    rts.enable_local = true
+    
+    rts.files.sample  # => ~/.rubytracks/menu/awesome_menu_song.ogg
+    rts.files.sample  # => /game/path/music/menu/other_menu_song.ogg
+
+Rubygame integration:
+
+    require "rubytrackselector"
+    require "rubygame"
+    
+    rts = RTS::Rts.new
+    rts.tag = RTS::MENU
+    
+    rts.play(:repeats => -1)
+
+_______________________________________________________________________________
+
+Ruby Track Selector is licensed under the GNU Lesser General Public License.
+See COPYING for details.
+
+_______________________________________________________________________________
+                                                   (c) 2010 by Raphael Robatsch

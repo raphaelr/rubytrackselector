@@ -1,0 +1,52 @@
+For a complete example, see the RTS module documentation.
+
+== User Music Directory Structure
+
+    ~ (home)
+    |
+    +- .rubytracks (created automatically)
+    |  |
+    |  +- tag1 (created automatically if needed)
+    |  +- tag2 (created automatically if needed)
+    |  |
+    |  +- noname_tag_independent_music.ogg
+    |  +- noname_tag_independent_music2.ogg
+	
+
+The standard tag names are:
+
+    - menu
+    - calm_menu
+    - loading
+    - calm_loading
+    - action_scene
+    - puzzle_scene
+    - world_scene
+	
+== Local Music Directory
+
+Each application may define it's own music directory, which has the same
+structure as the user's music directory.
+
+    @rts = RTS::Rts.new
+    @rts.local << "data/music"
+    @rts.enable_local = true
+
+== Setting the tag
+
+    @rts.tag = RTS::MENU
+
+== Selecting a random file
+
+    @rts.files.sample
+
+== Playing a random file
+
+    @rts.play
+	# Any options passed to RTS::Rts#play get redirected to Rubygame::Music#play.
+
+== Noname-Tag
+
+If you don't set a tag, or set the tag to RTS::NONAME, User Track Player will
+select the files outside a tag (directly in ~/.usertrackplayer). You shouldn't
+do that.
