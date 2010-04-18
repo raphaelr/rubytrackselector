@@ -21,7 +21,7 @@ module RTS
 	# Ruby Track Selector Version.
 	# 
 	# <tt>[major, minor, revision]</tt>
-	VERSION = [0, 0, 1]
+	VERSION = [0, 0, 2]
 end
 
 lib = File.join(File.expand_path(File.dirname(__FILE__)), "rubytrackselector")
